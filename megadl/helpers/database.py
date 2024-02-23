@@ -42,14 +42,14 @@ class CypherDB:
             await self.mongoc.update_async(
                 self.coll_users,
                 {"_id": user_id},
-                {"$inc": { "total_downloads": downloads }},
+                {"$inc": {"total_downloads": downloads}},
                 use_given=True,
             )
         elif uploads:
             await self.mongoc.update_async(
                 self.coll_users,
                 {"_id": user_id},
-                {"$inc": { "total_uploads": uploads }},
+                {"$inc": {"total_uploads": uploads}},
                 use_given=True,
             )
 
